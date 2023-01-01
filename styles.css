@@ -162,8 +162,8 @@ textarea {
 #survey-table {
   display: block;
   width: 100%;
-  /* white-space: nowrap; */
   border-collapse: collapse;
+  margin-top: 10px;
 }
 
 #survey-table th,
@@ -171,7 +171,7 @@ textarea {
   border: 0.5px solid rgb(176, 164, 164);
   text-align: center;
   padding: 10px;
-  min-width: 100px;
+  min-width: 120px;
 }
 
 #survey-table thead th {
