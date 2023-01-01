@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font: 1rem/1.5 "Poppins", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+#survey-form {
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 0.2px 0.2px rgba(0, 0, 0, 0.1);
+}
+
+/* form header */
+#logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+#survey-form .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 20px;
+}
+
+#survey-form .branding,
+#survey-form .address {
+  flex: 1;
+}
+
+#survey-form .branding {
+  display: flex;
+  align-items: center;
+}
+
+#survey-form .company-name {
+  margin-left: 20px;
+}
+
+#survey-form .company-name > h1 {
+  text-transform: uppercase;
+}
+
+#survey-form .company-name > h3 {
+  text-transform: lowercase;
+}
+
+#survey-form .address {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+/* #survey-form hr {
+  border: none;
+  height: 0.5px;
+  background-color: #eee;
+} */
+
+/* form body */
+#survey-form .form-body {
+  padding: 20px;
+  border-top: 0.5px solid #eee;
+}
+
+#survey-form .form-body > h1,
+#survey-form .form-body > p {
+  text-align: center;
+}
+
+#survey-form > h1 {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+#survey-form > p {
+  margin-bottom: 10px;
+}
+
+#survey-form .row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#survey-form .form-group {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 0.5px solid #eee;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+  padding: 10px;
+}
+
+.top-label {
+  display: block;
+  font-weight: bold;
+}
+
+.bottom-label {
+  font-size: 0.8rem;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.table-row {
+  overflow-x: auto;
+}
+
+#survey-table {
+  display: block;
+  width: 100%;
+  /* white-space: nowrap; */
+  border-collapse: collapse;
+}
+
+#survey-table th,
+#survey-table td {
+  border: 0.5px solid rgb(176, 164, 164);
+  text-align: center;
+  padding: 10px;
+  min-width: 100px;
+}
+
+#survey-table thead th {
+  background-color: gainsboro;
+}
+
+#survey-table thead th:first-of-type {
+  border: none;
+  background-color: transparent;
+}
+
+#survey-table tbody th {
+  text-align: left;
+}
+
+/* form footer */
+
+#survey-form .form-footer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#survey-form #submit-btn {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-color: navy;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#survey-form .form-footer {
+  border-top: 0.5px solid #eee;
+}
+
+#survey-form #submit-btn:hover {
+  background-color: rgb(0, 0, 86);
+}
+
+/* mobile styles */
+@media all and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  #survey-form .form-header {
+    flex-direction: column;
+  }
+  #survey-form .address {
+    text-align: center;
+    margin-top: 20px;
+  }
+  #survey-form .row {
+    flex-direction: column;
+  }
+  #survey-form .form-group {
+    margin: 10px 0;
+  }
+  #survey-form .row .form-group:empty {
+    display: none;
+  }
+}

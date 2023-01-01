@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="survey form, html, css">
+  <meta name="description" content="employee satisfaction survey page">
+  <meta name="author" content="Vince Ybañez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="icon" href="images/acme-logo.png" type="image/png">
+</head>
+
+<body>
+
+  <section class="survey">
+    <div class="container">
+
+      <form action="#" method="post" enctype="application/x-www-form-urlencoded" id="survey-form">
+
+        <!-- form header -->
+        <header class="form-header">
+          <div class="branding">
+            <img src="images/acme-logo.png" width="100%" alt="Logo" id="logo">
+            <div class="company-name">
+              <h1>Acme Global</h1>
+              <h3>company</h3>
+            </div>
+          </div>
+          <div class="address">
+            <p>3147 Patterson Street, Houston, TX, 77002</p>
+            <p>info@acmeglobal.com</p>
+            <p>www.acmeglobal.com</p>
+            <p>(123) 1234567</p>
+          </div>
+        </header>
+        <!-- end of form header -->
+
+        <!-- <hr> -->
+
+        <!-- form body -->
+        <div class="form-body">
+          <h1>Employee Satisfaction Survey</h1>
+          <p>Let us know how we can improve our services to you</p>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="fname" class="top-label">Name</label>
+              <input type="text" name="fname" id="fname" required>
+              <label for="fname" class="bottom-label">First Name</label>
+            </div>
+            <div class="form-group align-end">
+              <input type="text" name="lname" id="lname" required>
+              <label for="lname" class="bottom-label">Last Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="top-label">Gender</label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" name="gender" id="male" value="m">
+                  <label for="male">Male</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="gender" id="female" value="f">
+                  <label for="female">Female</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="top-label">Email</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="dept" class="top-label">Department</label>
+              <select name="dept" id="dept" required>
+                <option disabled selected>Select department</option>
+                <option value="accg">Accounting</option>
+                <option value="hr">Human Resource</option>
+                <option value="it">IT</option>
+                <option value="mktg">Marketing</option>
+                <option value="ops">Operations</option>
+                <option value="fin">Finance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="title" class="top-label">Title</label>
+              <input type="text" name="title" id="title" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="date" class="top-label">Date taken survey</label>
+              <input type="date" name="date" id="date" value="2023-01-01" required>
+            </div>
+            <div class="form-group"></div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="top-label">
+                How would you describe your overall level of job satisfaction?
+              </label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" name="level-job-sat" id="very-sat" value="5">
+                  <label for="very-sat">Very Satisfied</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="level-job-sat" id="some-sat" value="4">
+                  <label for="some-sat">Somewhat Satisfied</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="level-job-sat" id="neutral" value="3">
+                  <label for="neutral">Neutral</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="level-job-sat" id="some-dissat" value="2">
+                  <label for="some-dissat">Somewhat Dissatisfied</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="level-job-sat" id="very-dissat" value="1">
+                  <label for="very-dissat">Very Dissatisfied</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row table-row">
+            <div class="form-group">
+              <label class="top-label">
+                How would you rate the following?
+              </label>
+              <table id="survey-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Very Poor</th>
+                    <th>Poor</th>
+                    <th>Average</th>
+                    <th>Good</th>
+                    <th>Excellent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Salary</th>
+                    <td>
+                      <input type="radio" name="rating-1" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-1" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-1" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-1" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-1" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Overall Benefits</th>
+                    <td>
+                      <input type="radio" name="rating-2" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-2" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-2" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-2" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-2" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Health Benefits</th>
+                    <td>
+                      <input type="radio" name="rating-3" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-3" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-3" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-3" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-3" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Physical Environment</th>
+                    <td>
+                      <input type="radio" name="rating-4" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-4" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-4" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-4" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-4" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Senior Leadership</th>
+                    <td>
+                      <input type="radio" name="rating-5" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-5" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-5" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-5" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-5" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Individual Management</th>
+                    <td>
+                      <input type="radio" name="rating-6" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-6" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-6" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-6" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-6" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Performance Feedback</th>
+                    <td>
+                      <input type="radio" name="rating-7" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-7" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-7" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-7" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-7" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Employee Evaluations</th>
+                    <td>
+                      <input type="radio" name="rating-8" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-8" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-8" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-8" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-8" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Recognition</th>
+                    <td>
+                      <input type="radio" name="rating-9" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-9" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-9" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-9" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-9" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Training Opportunities</th>
+                    <td>
+                      <input type="radio" name="rating-10" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-10" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-10" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-10" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-10" value="5">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Opportunities for Advancement</th>
+                    <td>
+                      <input type="radio" name="rating-11" value="1">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-11" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-11" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-11" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="rating-11" value="5">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="top-label">
+                Do you feel valued at work?
+              </label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" name="valued-yes-no" id="valued-yes" value="y">
+                  <label for="valued-yes">Yes</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="valued-yes-no" id="valued-no" value="n">
+                  <label for="valued-no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="exp-valued-no" class="top-label">
+                If No, please explain.
+              </label>
+              <textarea name="exp-valued-no" id="exp-valued-no" cols="30" rows="10"
+                placeholder="Type here..."></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="top-label">
+                Do you have the resources you need to perform your job well?
+              </label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" name="perform-yes-no" id="perform-yes" value="y">
+                  <label for="perform-yes">Yes</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="perform-yes-no" id="perform-no" value="n">
+                  <label for="perform-no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="exp-perform-no" class="top-label">
+                If No, please explain.
+              </label>
+              <textarea name="exp-perform-no" id="exp-perform-no" cols="30" rows="10"
+                placeholder="Type here..."></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="top-label">
+                Does your job cause stress or anxiety?
+              </label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" name="stresses-yes-no" id="stresses-yes" value="y">
+                  <label for="stresses-yes">Yes</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="stresses-yes-no" id="stresses-no" value="n">
+                  <label for="stresses-no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="exp-stresses-yes" class="top-label">
+                If Yes, please explain.
+              </label>
+              <textarea name="exp-stresses-yes" id="exp-stresses-yes" cols="30" rows="10"
+                placeholder="Type here..."></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="top-label">
+                Are sufficient efforts being made to solicit colleague opinions and feedback?
+              </label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" name="efforts-yes-no" id="efforts-yes" value="y">
+                  <label for="efforts-yes">Yes</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="efforts-yes-no" id="efforts-no" value="n">
+                  <label for="efforts-no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="exp-efforts-yes" class="top-label">
+                If Yes, please explain.
+              </label>
+              <textarea name="exp-efforts-yes" id="exp-efforts-yes" cols="30" rows="10"
+                placeholder="Type here..."></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="add-feedback" class="top-label">
+                Please provide any additional feedback
+              </label>
+              <textarea name="add-feedback" id="add-feedback" cols="30" rows="10" placeholder="Type here..."></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- end of form body -->
+
+        <!-- form footer -->
+        <div class="form-footer">
+          <input type="submit" value="Submit" id="submit-btn">
+        </div>
+        <!-- end of form footer -->
+      </form>
+    </div>
+  </section>
+
+</body>
+
+</html>
